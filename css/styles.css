@@ -454,7 +454,7 @@ footer p, footer a {
 }
 @media(max-width: 2560px) {
     .wrap {
-        width: 1320px;
+        width: calc(100% - 260px);
     }
     section {
         padding-top: 82px;
@@ -683,7 +683,7 @@ footer p, footer a {
 }
 @media(max-width: 1440px) {
     .wrap {
-        width: 904px;
+        width: calc(100% - 120px);
     }
     section {
         padding-top: 52px;
@@ -813,7 +813,7 @@ footer p, footer a {
 }
 @media (max-width: 1024px) {
     .wrap {
-        width: 688px;
+        width: calc(100% - 60px);
     }
     .header_content h1 {
         padding-top: 314px;
