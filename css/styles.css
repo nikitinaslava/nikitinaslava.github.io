@@ -454,7 +454,7 @@ footer p, footer a {
 }
 @media(max-width: 2560px) {
     .wrap {
-        width: calc(100% - 260px);
+        width: 1320px;
     }
     section {
         padding-top: 82px;
@@ -683,7 +683,7 @@ footer p, footer a {
 }
 @media(max-width: 1440px) {
     .wrap {
-        width: calc(100% - 120px);
+        width: 904px;
     }
     section {
         padding-top: 52px;
@@ -813,7 +813,7 @@ footer p, footer a {
 }
 @media (max-width: 1024px) {
     .wrap {
-        width: calc(100% - 60px);
+        width: 688px;
     }
     .header_content h1 {
         padding-top: 314px;
@@ -1429,7 +1429,7 @@ footer p, footer a {
         padding-top: 80px;
     }
 }
-/************************* About us styles **********************************/
+/************************* team styles **********************************/
  .about_us_page .header_content {
     background-image: url(../img/about_us_bg.svg);
     background-position-y: -60px;
@@ -1644,8 +1644,8 @@ footer p, footer a {
         margin-bottom: -80px;
     }
     .join_us_bg_container img {
-        width: 990px;
-        height: 870px;
+        width: 850px;
+        height: 645px;
     }
     .join_us h2 {
         font-size: 64px;
@@ -1860,7 +1860,7 @@ footer p, footer a {
         margin-bottom: 8px;
     }
     .join_us {
-        overflow-x: hidden;
+        overflow: hidden;
         border-radius: 40px;
         padding: 40px 0 0;
         margin-bottom: -40px;
@@ -1896,7 +1896,7 @@ footer p, footer a {
         margin-left: 8px;
     }
     .join_us p {
-        width: 290px;
+        width: 100%;
         margin-bottom: 24px;
     }
     .join_us a {
@@ -1923,6 +1923,13 @@ footer p, footer a {
     color: #FFFFFF;
     top: 260px;
     background: unset;
+    z-index: 3;
+ }
+ .ppc_manager_page .header_content a.back_btn img {
+    position: relative;
+    margin-right: 26px;
+    height: 20px;
+    top: 4px;
  }
  .ppc_manager_page .header_content h1 {
     width: 1139px;
@@ -1947,7 +1954,7 @@ footer p, footer a {
 
  .ppc_manager_page .hot_positions_slider {
     background: #F1F6FA;
-    border-radius: 140px;
+    border-radius: 140px 140px 0 0;
  }
  .ppc_manager_page .hot_positions_slider h2 {
     width: 1174px;
@@ -1958,6 +1965,152 @@ footer p, footer a {
  .ppc_manager_page .hot_positions_slider .bx-viewport {
     margin-bottom: 440px;
  }
- .hot_positions_slider .bx-controls.bx-has-controls-direction.bx-has-pager {
+ .ppc_manager_page .hot_positions_slider .bx-controls.bx-has-controls-direction.bx-has-pager {
     top: -278px;
+ }
+ @media (max-width: 2560px) {
+    .ppc_manager_page .header_content {
+        background-position-y: -72px;
+        background-size: 822px 845px;
+    }
+    .ppc_manager_page .header_content h1 {
+        width: 645px;
+        padding-top: 112px;
+        margin: 0 auto 116px;
+    }
+    .ppc_manager_page .header_content h1:after {
+        top: 110px;
+    }
+    .ppc_manager_page .header_content p {
+        width: 645px;
+        margin: 0 auto 44px;
+    }
+    .ppc_manager_page .header_content a.back_btn {
+        top: 120px;
+    }
+    .ppc_manager_page .header_content a {
+        margin-bottom: 200px;
+    }
+    .ppc_manager_page .hot_positions_slider {
+        border-radius: 80px 80px 0 0;
+    }
+    .ppc_manager_page .hot_positions_slider h2 {
+        width: 778px;
+    }
+    .ppc_manager_page .hot_positions_slider .bx-viewport {
+        margin-bottom: 238px;
+    }
+    .ppc_manager_page .hot_positions_slider .bx-controls.bx-has-controls-direction.bx-has-pager {
+        top: -195px;
+    }
+ }
+ @media (max-width: 1440px) {
+    .ppc_manager_page .header_content {
+        background-position-y: -72px;
+        background-size: 822px 845px;
+    }
+    .ppc_manager_page .header_content h1 {
+        width: 594px;
+        padding-top: 186px;
+        margin: 0 auto 154px;
+    }
+    .ppc_manager_page .header_content h1:after {
+        top: 124px;
+        right: -114px;
+    }
+    .ppc_manager_page .header_content p {
+        width: 594px;
+    }
+    .ppc_manager_page .header_content a.back_btn {
+        top: 44px;
+    }
+    .ppc_manager_page .header_content a {
+        margin-bottom: 160px;
+    }
+    .ppc_manager_page .hot_positions_slider h2 {
+        width: 514px;
+        margin-bottom: 0;
+    }
+    .ppc_manager_page .hot_positions_slider .bx-viewport {
+        margin-bottom: 182px;
+    }
+    .ppc_manager_page .hot_positions_slider .bx-controls.bx-has-controls-direction.bx-has-pager {
+        top: -156px;
+    }
+ }
+ @media (max-width: 1024px) {
+    .ppc_manager_page .header_content {
+        background-position-y: 114px;
+    }
+    .ppc_manager_page .header_content h1 {
+        padding-top: 314px;
+        margin: 0 auto 254px;
+    }
+    .ppc_manager_page .header_content h1:after {
+        top: 106px;
+        right: -28px;
+    }
+    .ppc_manager_page .header_content a.back_btn {
+        top: 44px;
+    }
+    .ppc_manager_page .header_content a {
+        margin-bottom: 214px;
+    }
+    .ppc_manager_page .hot_positions_slider h2 {
+        width: 514px;
+        margin-bottom: 0;
+    }
+    .ppc_manager_page .hot_positions_slider .bx-viewport {
+        margin-bottom: 162px;
+    }
+    .ppc_manager_page .hot_positions_slider .bx-controls.bx-has-controls-direction.bx-has-pager {
+        top: -136px;
+    }
+ }
+ @media (max-width: 768px) {
+    .ppc_manager_page .header_content {
+        background-position-y: 8px;
+        background-size: 470px 500px;
+    }
+    .ppc_manager_page .header_content h1 {
+        padding-top: 122px;
+        margin: 0 auto 130px;
+        width: 288px;
+    }
+    .ppc_manager_page .header_content h1:after {
+        display: none;
+    }
+    .ppc_manager_page .header_content p {
+        width: 288px;
+        margin-bottom: 36px;
+    }
+    .ppc_manager_page .header_content a.back_btn {
+        top: 28px;
+        line-height: 24px;
+        border: none;
+        padding: 0;
+    }
+    .ppc_manager_page .header_content a.back_btn img {
+        margin-right: 12px;
+        height: 18px;
+    }
+    .ppc_manager_page .header_content a {
+        margin-bottom: 242px;
+    }
+    .main_ppc_content {
+        margin-bottom: -178px;
+    }
+    .ppc_manager_page .hot_positions_slider {
+        border-radius: 40px 40px 0 0;
+    }
+    .ppc_manager_page .hot_positions_slider h2 {
+        width: 100%;
+        margin-bottom: -20px;
+    }
+    .ppc_manager_page .hot_positions_slider .bx-viewport {
+        margin-bottom: 162px;
+    }
+    .ppc_manager_page .hot_positions_slider .bx-controls.bx-has-controls-direction.bx-has-pager {
+        top: -136px;
+    }
  }
