@@ -17,19 +17,19 @@
 					<nav class="header_navigation">
 						<ul>
 							<li><a href="#">About</a></li>
-							<li><a href="#">Vacancies</a></li>
-							<li><a href="#">Team</a></li>
-							<li><a href="#">Contact us</a></li>
+							<li><a href="vacancies.html">Vacancies</a></li>
+							<li><a href="team.html">Team</a></li>
+							<li class="contact_us_triger"><a href="#">Contact us</a></li>
 						</ul>
 					</nav>
 					<div class="burger_menu"></div>
 				</div>
 				<nav class="header_navigation_mobile">
 					<ul>
-						<li><a href="our_team.html">About</a></li>
-						<li><a href="#">Vacancies</a></li>
-						<li><a href="#">Team</a></li>
-						<li><a href="#">Contact us</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="vacancies.html">Vacancies</a></li>
+						<li><a href="team.html">Team</a></li>
+						<li class="contact_us_triger"><a href="#">Contact us</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -256,7 +256,7 @@
 				<div class="join_us_content">
 					<h2>Didn’t find the job you want?</h2>
 					<p>We are always open for exceptional people to join our team, so if you didn't find a suitable position apply here.</p>
-					<a href="#">Join us</a>
+					<button>Join us</button>
 				</div>
 				<div class="join_us_bg_container">
 					<img src="img/question.svg" alt="???">
@@ -276,6 +276,58 @@
 				</div>
 			</div>
 		</footer>
+		<!-- join us modal window -->
+		<div class="join_us_modal modal_window blue_bg">
+			<div class="wrap">
+				<h2>Jooin us</h2>
+				<button class="close"><img src="img/close-square.svg" alt="x"></button>
+				<form action="#">
+					<div class="first_modal">						
+						<input type="text" placeholder="Full name*" id="Name">
+						<input type="text" placeholder="Desirable position*">
+						<p class="email_inpt">
+							<label for="Email">Email*</label>
+							<input type="email" placeholder="example@gmail.com" id="Email">
+						</p>
+						<input type="text" placeholder="Salary expectations*">
+						<input type="text" placeholder="Location*">
+						<input type="text" placeholder="Linkedin profile">
+					</div>
+					<div class="second_modal">
+						<p class="upload_file">
+							<label for="CVFile">Upload CV file*</label>
+							<input id="CVFile" type="file">
+						</p>
+						<p class="upload_file">
+							<label for="CoverLetter">Upload Cover Letter</label>
+							<input id="CoverLetter" type="file">
+						</p>
+						<textarea name="textarea" id="textarea"  placeholder="Comment"></textarea>
+					</div>
+					<input type="submit" class="submit" value="Submit">
+				</form>
+				<button class="next_btn">Next step</button>
+				<button class="back_btn">Back</button>
+			</div>
+		</div>
+		<!-- end join us modal window -->
+		<!-- contact us modal window -->
+		<div class="contact_us_modal modal_window blue_bg">
+			<div class="wrap">
+				<h2>Contact us</h2>
+				<button class="close"><img src="img/close-square.svg" alt="x"></button>
+				<form action="#">
+					<input type="text" placeholder="Full name*" id="Name">
+					<p class="email_inpt">
+						<label for="Email">Email*</label>
+						<input type="email" placeholder="example@gmail.com" id="Email">
+					</p>
+					<textarea name="textarea" id="textarea"  placeholder="Comment"></textarea>
+					<input type="submit" class="submit" value="Submit">
+				</form>
+			</div>
+		</div>
+		<!-- end contact us modal window -->
 		<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> 
 		<script type="text/javascript" src="js/main.js"></script>
 		<script src="js/jquery.bxslider.min.js"></script>

@@ -17,19 +17,19 @@
 					<nav class="header_navigation">
 						<ul>
 							<li><a href="#">About</a></li>
-							<li><a href="#">Vacancies</a></li>
-							<li><a href="#">Team</a></li>
-							<li><a href="#">Contact us</a></li>
+							<li><a href="vacancies.html">Vacancies</a></li>
+							<li><a href="team.html">Team</a></li>
+							<li class="contact_us_triger"><a href="#">Contact us</a></li>
 						</ul>
 					</nav>
 					<div class="burger_menu"></div>
 				</div>
 				<nav class="header_navigation_mobile">
 					<ul>
-						<li><a href="our_team.html">About</a></li>
-						<li><a href="#">Vacancies</a></li>
-						<li><a href="#">Team</a></li>
-						<li><a href="#">Contact us</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="vacancies.html">Vacancies</a></li>
+						<li><a href="team.html">Team</a></li>
+						<li class="contact_us_triger"><a href="#">Contact us</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -84,6 +84,23 @@
 				</div>
 			</div>
 		</footer>
+		<!-- contact us modal window -->
+		<div class="contact_us_modal modal_window blue_bg">
+			<div class="wrap">
+				<h2>Contact us</h2>
+				<button class="close"><img src="img/close-square.svg" alt="x"></button>
+				<form action="#">
+					<input type="text" placeholder="Full name*" id="Name">
+					<p class="email_inpt">
+						<label for="Email">Email*</label>
+						<input type="email" placeholder="example@gmail.com" id="Email">
+					</p>
+					<textarea name="textarea" id="textarea"  placeholder="Comment"></textarea>
+					<input type="submit" class="submit" value="Submit">
+				</form>
+			</div>
+		</div>
+		<!-- end contact us modal window -->
 		<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> 
 		<script type="text/javascript" src="js/main.js"></script>
 		<script src="js/jquery.bxslider.min.js"></script>

@@ -17,19 +17,19 @@
 					<nav class="header_navigation">
 						<ul>
 							<li><a href="#">About</a></li>
-							<li><a href="#">Vacancies</a></li>
-							<li><a href="#">Team</a></li>
-							<li><a href="#">Contact us</a></li>
+							<li><a href="vacancies.html">Vacancies</a></li>
+							<li><a href="team.html">Team</a></li>
+							<li class="contact_us_triger"><a href="#">Contact us</a></li>
 						</ul>
 					</nav>
 					<div class="burger_menu"></div>
 				</div>
 				<nav class="header_navigation_mobile">
 					<ul>
-						<li><a href="our_team.html">About</a></li>
-						<li><a href="#">Vacancies</a></li>
-						<li><a href="#">Team</a></li>
-						<li><a href="#">Contact us</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="vacancies.html">Vacancies</a></li>
+						<li><a href="team.html">Team</a></li>
+						<li class="contact_us_triger"><a href="#">Contact us</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -37,7 +37,7 @@
 				<div class="wrap">
 					<h1>Join our <br>expert team</h1>
 					<p>We are looking for a great people to build amazing stuff!</p>
-					<a href="#">Apply now</a>
+					<a class="apply_position_triger" href="#">Apply now</a>
 				</div>
 			</div>
 		</header>
@@ -116,42 +116,42 @@
 				<h2>Hot positions</h2>
 				<div class="slider">
 					<div class="slide">
-						<a class="category" href="#">Customer Care</a>
+						<p class="category">Customer Care</p>
 						<h3>SEO</h3>
 						<a href="#" class="read_more">Read more<img src="img/arrow-right.svg" alt="arrow"></a>
 					</div>
 					<div class="slide">
-						<a class="category" href="#">Customer Care</a>
+						<p class="category">Customer Care</p>
 						<h3>Linkbuilder</h3>
 						<a href="#" class="read_more">Read more<img src="img/arrow-right.svg" alt="arrow"></a>
 					</div>
 					<div class="slide">
-						<a class="category" href="#">Customer Care</a>
+						<p class="category">Customer Care</p>
 						<h3>SMM/ Community Manager</h3>
 						<a href="#" class="read_more">Read more<img src="img/arrow-right.svg" alt="arrow"></a>
 					</div>
 					<div class="slide">
-						<a class="category" href="#">Customer Care</a>
+						<p class="category">Customer Care</p>
 						<h3>Retention manager (b2c role)</h3>
 						<a href="#" class="read_more">Read more<img src="img/arrow-right.svg" alt="arrow"></a>
 					</div>
 					<div class="slide">
-						<a class="category" href="#">Customer Care</a>
+						<p class="category">Customer Care</p>
 						<h3>SEO</h3>
 						<a href="#" class="read_more">Read more<img src="img/arrow-right.svg" alt="arrow"></a>
 					</div>
 					<div class="slide">
-						<a class="category" href="#">Customer Care</a>
+						<p class="category">Customer Care</p>
 						<h3>Linkbuilder</h3>
 						<a href="#" class="read_more">Read more<img src="img/arrow-right.svg" alt="arrow"></a>
 					</div>
 					<div class="slide">
-						<a class="category" href="#">Customer Care</a>
+						<p class="category">Customer Care</p>
 						<h3>SMM/ Community Manager</h3>
 						<a href="#" class="read_more">Read more<img src="img/arrow-right.svg" alt="arrow"></a>
 					</div>
 					<div class="slide">
-						<a class="category" href="#">Customer Care</a>
+						<p class="category">Customer Care</p>
 						<h3>Retention manager (b2c role)</h3>
 						<a href="#" class="read_more">Read more<img src="img/arrow-right.svg" alt="arrow"></a>
 					</div>
@@ -171,6 +171,48 @@
 				</div>
 			</div>
 		</footer>
+		<!-- apply position modal --> 
+		<div class="apply_position_modal modal_window blue_bg">
+			<div class="wrap">
+				<h2>Apply to position</h2>
+				<button class="close"><img src="img/close-square.svg" alt="x"></button>
+				<form action="#">				
+					<input type="text" placeholder="Full name*" id="Name">
+					<p class="upload_file">
+						<label for="CVFile">Upload CV file*</label>
+						<input id="CVFile" type="file">
+					</p>
+					<p class="email_inpt">
+						<label for="Email">Email*</label>
+						<input type="email" placeholder="example@gmail.com" id="Email">
+					</p>
+					<p class="upload_file">
+						<label for="CoverLetter">Upload Cover Letter</label>
+						<input id="CoverLetter" type="file">
+					</p>
+					<input type="text" placeholder="Location*">
+					<input type="submit" class="submit" value="Send">
+				</form>
+			</div>
+		</div>
+		<!-- end apply position modal --> 
+		<!-- contact us modal window -->
+		<div class="contact_us_modal modal_window blue_bg">
+			<div class="wrap">
+				<h2>Contact us</h2>
+				<button class="close"><img src="img/close-square.svg" alt="x"></button>
+				<form action="#">
+					<input type="text" placeholder="Full name*" id="Name">
+					<p class="email_inpt">
+						<label for="Email">Email*</label>
+						<input type="email" placeholder="example@gmail.com" id="Email">
+					</p>
+					<textarea name="textarea" id="textarea"  placeholder="Comment"></textarea>
+					<input type="submit" class="submit" value="Submit">
+				</form>
+			</div>
+		</div>
+		<!-- end contact us modal window -->
 		<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> 
 		<script type="text/javascript" src="js/main.js"></script>
 		<script src="js/jquery.bxslider.min.js"></script>
