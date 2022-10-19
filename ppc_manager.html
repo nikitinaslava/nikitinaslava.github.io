@@ -38,7 +38,7 @@
 					<a href="#" class="back_btn" onclick="history.back();return false;"><img src="img/arrow-left.svg" alt="<">Back</a>
 					<h1>PPC manager</h1>
 					<p>We are currently looking for a PPC Specialist who will be involved in developing promotion strategy for the project.</p>
-					<a href="#">Apply to this position</a>
+					<a class="apply_position_triger" href="#">Apply to this position</a>
 				</div>
 			</div>
 		</header>
@@ -146,6 +146,31 @@
 				</div>
 			</div>
 		</footer>
+		<!-- apply position modal --> 
+		<div class="apply_position_modal modal_window blue_bg">
+			<div class="wrap">
+				<h2>Apply to position</h2>
+				<button class="close"><img src="img/close-square.svg" alt="x"></button>
+				<form action="#">				
+					<input type="text" placeholder="Full name*" id="Name">
+					<p class="upload_file">
+						<label for="CVFile">Upload CV file*</label>
+						<input id="CVFile" type="file">
+					</p>
+					<p class="email_inpt">
+						<label for="Email">Email*</label>
+						<input type="email" placeholder="example@gmail.com" id="Email">
+					</p>
+					<p class="upload_file">
+						<label for="CoverLetter">Upload Cover Letter</label>
+						<input id="CoverLetter" type="file">
+					</p>
+					<input type="text" placeholder="Location*">
+					<input type="submit" class="submit" value="Send">
+				</form>
+			</div>
+		</div>
+		<!-- end apply position modal --> 
 		<!-- join us modal window -->
 		<div class="join_us_modal modal_window blue_bg">
 			<div class="wrap">
