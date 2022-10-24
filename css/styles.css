@@ -116,16 +116,38 @@ header {
 .header_content a {
     display: block;
     width: fit-content;
+    height: 96px;
     font-weight: 700;
     color: #008EFF;
     margin: 0 auto 294px;
-    padding: 32px 52px;
+    line-height: 96px;
+    text-align: center;
     background: #FFFFFF;
+    padding: 0 52px;
     border-radius: 62px;
     transition: all 0.3s;
 }
 .header_content a:hover, .join_us button:hover {
     background: #E9F5FF;
+}
+.header_content .bg_image_container img {
+    position: absolute;
+}
+.header_content .bg_image_container .main_bg_right_top {
+    right: 0;
+    top: 120px;
+}
+.header_content .bg_image_container .main_bg_right_bottom {
+    right: 200px;
+    top: 940px;
+}
+.header_content .bg_image_container .main_bg_left_top {
+    left: 80px;
+    top: 240px;
+}
+.header_content .bg_image_container .main_bg_left_bottom {
+    left: 360px;
+    top: 1110px;
 }
 .main_content_why_my_container, .privacy_content, .main_ppc_content, .vacancies_container {
     position: relative;
@@ -151,8 +173,11 @@ header {
     display: flex;
 }
 #TabsWhyMyContainer li {
+    width: 127px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
     font-weight: 400;
-    padding: 8px 12px;
     border-radius: 10px;
     margin-right: 24px;
     margin-bottom: 90px;
@@ -177,14 +202,17 @@ header {
     margin-bottom: 445px;
 }
 .why_my_container_tab_content .point_tab a {
+    width: 306px;
+    height: 96px;
     display: inline-block;
     font-weight: 700;
-    padding: 32px 52px;
+    line-height: 96px;
+    text-align: center;
     background: #008EFF;
     border-radius: 52px;
     transition: all 0.3s;
 }
-.why_my_container_tab_content .point_tab a:hover {
+.why_my_container_tab_content .point_tab a:hover, .cookie_modal .accept_all:hover {
     background: #0087F3;
 }
 .why_my_container_tab_content .point_tab .point_tab_content {
@@ -199,7 +227,7 @@ header {
     top: -140px;
     right: 0;
     box-sizing: border-box;
-    height: -webkit-fill-available;
+    height: 812px;
 }
 .why_my_container_tab_content .point_tab .point_tab_content h4 {
     font-weight: 700;
@@ -237,7 +265,7 @@ header {
     display: block;
     position: absolute;
     left: 0;
-    top: 12px;
+    top: 8px;
     width: 8px;
     height: 8px;
     border-radius: 50%;
@@ -283,12 +311,14 @@ header {
     content: "Work in progress";
     display: block;
     position: absolute;
+    width: 219px;
+    height: 48px;
     font-weight: 700;
     font-size: 24px;
-    line-height: 32px;
+    line-height: 48px;
     color: #000000;
     transform: rotate(-10.56deg);
-    padding: 10px 13px;
+    text-align: center;
     background: #E9E124;
     border-radius: 10px;
     left: 44px;
@@ -325,12 +355,13 @@ header {
 }
 .hot_positions_slider .bx-wrapper {
     max-width: unset !important;
-    width: 200%;
 }
 .hot_positions_slider .bx-viewport {
+    width: 210% !important;
     padding: 40px 30px;
     margin-left: -30px;
     margin-bottom: 318px;
+    overflow-x: scroll;
 }
 .hot_positions_slider .slide, .vacancies_container .flex_container div {
     display: flex;
@@ -350,11 +381,13 @@ header {
 }
 .hot_positions_slider .slide .category, .vacancies_container .flex_container div .category {
     width: fit-content;
+    padding: 0 22px;
+    height: 60px;
     font-weight: 400;
     font-size: 24px;
-    line-height: 32px;
+    line-height: 60px;
+    text-align: center;
     color: #10181F;
-    padding: 15px 22px;
     background: #EAF1F7;
     border-radius: 17.7778px;
 }
@@ -441,6 +474,55 @@ footer {
     padding: 300px 0 60px;
     color: #9AA7B1;
 }
+.home_page footer {
+    padding-top: 246px;
+}
+.map_container p {
+    width: 1482px;
+    margin: 0 auto 134px;
+    font-size: 28px;
+    line-height: 32px;
+    text-align: center;
+    color: #10181F;
+}
+.map_container .flex_container {
+    margin-bottom: 86px;
+}
+.map_container .flex_container div {
+    width: 464px;
+}
+.map_container .flex_container div h3 {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 72px;
+    color: #10181F;
+    margin-bottom: 28px;
+}
+.map_container .flex_container div span {
+    font-weight: 500;
+    font-size: 110px;
+    line-height: 120px;
+    color: #1999FF;
+    margin-bottom: 22px;
+}
+.map_container .flex_container div p {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 71px;
+    color: #40576C;
+    margin-bottom: 0;
+    width: unset;
+    text-align: left;
+}
+.map_container .map_wrap {
+    width: 100%;
+    margin-bottom: 168px;
+    border-radius: 100px;
+    overflow: hidden;
+}
+.map_container .map_wrap img {
+    width: 100%;
+}
 footer .flex_container {
     align-items: center;
 }
@@ -500,10 +582,30 @@ footer p, footer a {
         margin-bottom: 44px;
     }
     .header_content a {
+        padding: 0 30px;
+        height: 56px;
         font-size: 18px;
-        line-height: 24px;
+        line-height: 58px;
         margin-bottom: 154px;
-        padding: 16px 30px;
+    }
+    .header_content .bg_image_container .main_bg_right_top {
+        width: 130px;
+        top: 90px;
+    }
+    .header_content .bg_image_container .main_bg_right_bottom {
+        right: 130px;
+        top: 550px;
+        width: 100px;
+    }
+    .header_content .bg_image_container .main_bg_left_top {
+        left: 39px;
+        width: 140px;
+        top: 150px;
+    }
+    .header_content .bg_image_container .main_bg_left_bottom {
+        left: 240px;
+        width: 160px;
+        top: 630px;
     }
     .main_content_why_my_container {
         top: -122px;
@@ -522,13 +624,16 @@ footer p, footer a {
         margin-bottom: 110px;
     }
     #TabsWhyMyContainer li {
+        width: 84px;
+        height: 34px;
         font-size: 14px;
-        line-height: 18px;
+        line-height: 38px;
         margin-right: 8px;
         margin-bottom: 44px;
     }
     .why_my_container_tab_content .point_tab .point_tab_content {
         width: 730px;
+        height: 456px;
         padding: 0 64px;
         border-radius: 80px;
         top: -80px;
@@ -541,9 +646,10 @@ footer p, footer a {
         margin-bottom: 234px;
     }
     .why_my_container_tab_content .point_tab a {
+        width: 190px;
+        height: 64px;
         font-size: 18px;
-        line-height: 24px;
-        padding: 20px 30px;
+        line-height: 68px;
     }
     .why_my_container_tab_content .point_tab .point_tab_content h4 {
         font-size: 20px;
@@ -557,7 +663,7 @@ footer p, footer a {
         padding-left: 30px;
     }
     .why_my_container_tab_content .point_tab .point_tab_content ul li:before, .privacy_content li:before, .main_ppc_content li:before {
-        top: 8px;
+        top: 6px;
         width: 6px;
         height: 6px;
     }
@@ -598,8 +704,10 @@ footer p, footer a {
         margin-bottom: 24px;
     }
     .missions_container .targets_container::before {
+        width: 138px;
+        height: 34px;
         font-size: 14px;
-        line-height: 18px;
+        line-height: 38px;
         left: 40px;
         top: -15px;
     }
@@ -631,9 +739,10 @@ footer p, footer a {
         height: 324px;
     }
     .hot_positions_slider .slide .category, .vacancies_container .flex_container div .category {
+        padding: 0 12px;
+        height: 34px;
         font-size: 14px;
-        line-height: 18px;
-        padding: 8px 12px;
+        line-height: 38px;
         border-radius: 10px;
     }
     .hot_positions_slider .slide h3, .vacancies_container .flex_container div h3 {
@@ -674,6 +783,34 @@ footer p, footer a {
     footer {
         padding: 204px 0 34px;
     }
+    .home_page footer {
+        padding-top: 246px;
+    }
+    .map_container p {
+        width: 1160px;
+        margin: 0 auto 112px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .map_container .flex_container div {
+        width: 280px;
+    }
+    .map_container .flex_container div h3 {
+        font-size: 38px;
+        line-height: 44px;
+        margin-bottom: 16px;
+    }
+    .map_container .flex_container div span {
+        margin-bottom: 14px;
+    }
+    .map_container .flex_container div p {
+        font-size: 24px;
+        line-height: 43px;
+        width: unset;
+    }
+    .map_container .map_wrap {
+        margin-bottom: 134px;
+    }
     .logo_footer img {
         width: 195px;
     }
@@ -705,6 +842,23 @@ footer p, footer a {
     .header_content {
         background-position-y: -8px;
         background-size: 590px 760px;
+    }
+    .header_content .bg_image_container .main_bg_right_top {
+        width: 110px;
+    }
+    .header_content .bg_image_container .main_bg_right_bottom {
+        right: 70px;
+        top: 584px;
+    }
+    .header_content .bg_image_container .main_bg_left_top {
+        left: 10px;
+        width: 140px;
+        top: 110px;
+    }
+    .header_content .bg_image_container .main_bg_left_bottom {
+        left: 60px;
+        width: 130px;
+        top: 690px;
     }
     .main_content_why_my_container {
         margin-bottom: -6px;
@@ -747,6 +901,9 @@ footer p, footer a {
     }
     .why_my_container_tab_content .point_tab .point_two_content:before {
         top: -64px;
+    }
+    .why_my_container_tab_content .point_tab .point_tab_content ul li:before, .privacy_content li:before, .main_ppc_content li:before {
+        top: 4px;
     }
     .missions_container .head_missions {
         margin-bottom: 134px;
@@ -803,6 +960,37 @@ footer p, footer a {
     }
     footer {
         padding: 184px 0 32px;
+    }    
+    .home_page footer {
+        padding-top: 180px;
+    }
+    .map_container p {
+        width: 100%;
+        margin: 0 auto 80px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .map_container .flex_container div {
+        width: 194px;
+    }
+    .map_container .flex_container div h3 {
+        font-size: 26px;
+        line-height: 30px;
+        margin-bottom: 12px;
+    }
+    .map_container .flex_container div span {
+        margin-bottom: 10px;
+        font-size: 64px;
+        line-height: 80px;
+    }
+    .map_container .flex_container div p {
+        font-size: 16px;
+        line-height: 30px;
+        width: unset;
+    }
+    .map_container .map_wrap {
+        border-radius: 62px;
+        margin-bottom: 114px;
     }
     .logo_footer img {
         width: 126px;
@@ -826,6 +1014,20 @@ footer p, footer a {
     .header_content {
         background-position-y: 85px;
         background-size: 668px 855px;
+    }
+    .header_content .bg_image_container .main_bg_right_top {
+        width: 110px;
+    }
+    .header_content .bg_image_container .main_bg_right_bottom {
+        right: 30px;
+        top: 794px;
+    }
+    .header_content .bg_image_container .main_bg_left_top {
+        left: 0;
+    }
+    .header_content .bg_image_container .main_bg_left_bottom {
+        left: 40px;
+        top: 950px;
     }
     .main_content_why_my_container {
         top: -87px;
@@ -962,10 +1164,27 @@ footer p, footer a {
         margin-bottom: 36px;
     }
     .header_content a {
+        height: 44px;
         font-size: 14px;
-        line-height: 16px;
+        line-height: 48px;
         margin-bottom: 114px;
-        padding: 14px 30px;
+    }
+    .header_content .bg_image_container .main_bg_right_top {
+        width: 80px;
+        top: 60px;
+        right: -10px;
+    }
+    .header_content .bg_image_container .main_bg_right_bottom {
+        right: -50px;
+        top: 350px;
+    }
+    .header_content .bg_image_container .main_bg_left_top {
+        left: -45px;
+        width: 100px;
+    }
+    .header_content .bg_image_container .main_bg_left_bottom {
+        left: -40px;
+        top: 450px;
     }
     .main_content_why_my_container .flex_container {
         margin-bottom: 32px;
@@ -1011,8 +1230,9 @@ footer p, footer a {
     }
     .why_my_container_tab_content .point_tab a {
         display: block;
-        padding: 10px 79px;
         width: 288px;
+        height: 44px;
+        line-height: 48px;
         text-align: center;
         margin: 0 auto;
         box-sizing: border-box;
@@ -1093,6 +1313,40 @@ footer p, footer a {
     }
     .hot_positions_slider .bx-controls-direction {
         display: none;
+    }  
+    .home_page footer {
+        padding-top: 130px;
+    }
+    .map_container p {
+        width: 100%;
+        margin: 0 auto 44px;
+        text-align: left;
+    }
+    .map_container .flex_container {
+        margin-bottom: 0;
+    }
+    .map_container .flex_container div {
+        width: 100%;
+        margin-bottom: 36px;
+    }
+    .map_container .flex_container div h3 {
+        font-size: 20px;
+        line-height: 22px;
+        margin-bottom: 8px;
+    }
+    .map_container .flex_container div span {
+        margin-bottom: 8px;
+        font-size: 34px;
+        line-height: 38px;
+    }
+    .map_container .flex_container div p {
+        font-size: 12px;
+        line-height: 22px;
+        width: unset;
+    }
+    .map_container .map_wrap {
+        border-radius: 40px;
+        margin-bottom: 80px;
     }
     .logo_footer {
         bottom: 126px;
@@ -1253,18 +1507,18 @@ footer p, footer a {
         width: 90%;
         padding: 32px 24px;
         position: absolute;
-        bottom: 73px;
+        bottom: 20%;
         z-index: 2;
     }
     .error_content .wrap {
-        display: block;
+        justify-content: center;
     }
     .error_image_container {
         width: 110%;
+        margin-bottom: calc(25% - 2%);
     }
     .error_image_container img {
-        left: unset;
-        width: 100%;
+        left: calc(45% - 146px);
         height: auto;
         top: unset;
     }
@@ -1519,7 +1773,7 @@ footer p, footer a {
     display: block;
     position: absolute;
     left: 0;
-    top: 12px;
+    top: 8px;
     width: 8px;
     height: 8px;
     border-radius: 50%;
@@ -1574,6 +1828,7 @@ footer p, footer a {
     padding: 32px 52px;
     display: block;
     width: fit-content;
+    cursor: pointer;
 }
 .join_us_bg_container {
     position: absolute;
@@ -1600,6 +1855,8 @@ footer p, footer a {
     .our_team {
         padding-top: 60px;
         margin-bottom: -70px;
+        border-radius: 80px;
+        top: -166px;
     }
     .temate_data {
         width: 100%;
@@ -1635,7 +1892,7 @@ footer p, footer a {
         line-height: 20px;
     }
     .temate_data_content li:before {
-        top: 8px;
+        top: 4px;
         width: 6px;
         height: 6px;
     }
@@ -1697,6 +1954,7 @@ footer p, footer a {
     }
     .our_team {
         margin-bottom: -70px;
+        top: -130px;
     }
     .temate_data {
         margin-bottom: 44px;
@@ -1780,6 +2038,7 @@ footer p, footer a {
     }
     .our_team {
         margin-bottom: -70px;
+        top: -150px;
     }
     .temate_data:nth-child(1) {
         align-items: normal;
@@ -1904,6 +2163,7 @@ footer p, footer a {
         margin-bottom: 24px;
     }
     .join_us button {
+        font-size: 14px;
         padding: 10px 30px;
     }
     .about_us_page footer {
@@ -1920,7 +2180,9 @@ footer p, footer a {
     display: block;
  }
  .ppc_manager_page .header_content a.back_btn {
-    padding: 16px 30px;
+    padding: 0 30px;
+    height: 64px;
+    line-height: 64px;
     box-sizing: border-box;
     position: absolute;
     border: 2px solid #FFFFFF;
@@ -1933,7 +2195,7 @@ footer p, footer a {
     position: relative;
     margin-right: 26px;
     height: 20px;
-    top: 4px;
+    top: 2px;
  }
  .ppc_manager_page .header_content h1 {
     width: 1139px;
@@ -1970,6 +2232,7 @@ footer p, footer a {
  }
  .ppc_manager_page .hot_positions_slider .bx-controls.bx-has-controls-direction.bx-has-pager {
     top: -278px;
+    z-index: 3;
  }
  @media (max-width: 2560px) {
     .ppc_manager_page .header_content {
@@ -1990,6 +2253,11 @@ footer p, footer a {
     }
     .ppc_manager_page .header_content a.back_btn {
         top: 120px;
+        height: 56px;
+        line-height: 56px;
+    }
+    .ppc_manager_page .header_content a.back_btn img {
+        top: 4px;
     }
     .ppc_manager_page .header_content a {
         margin-bottom: 200px;
@@ -2004,7 +2272,7 @@ footer p, footer a {
         margin-bottom: 238px;
     }
     .ppc_manager_page .hot_positions_slider .bx-controls.bx-has-controls-direction.bx-has-pager {
-        top: -195px;
+        top: -175px;
     }
  }
  @media (max-width: 1440px) {
@@ -2194,11 +2462,13 @@ footer p, footer a {
     display: none;
 }
 .vacancies_container .category_list li {
-    padding: 8px 12px;
+    height: 48px;
+    padding: 0 12px;
     margin-right: 8px;
     font-size: 24px;
-    line-height: 32px;
+    line-height: 52px;
     border-radius: 10px;
+    cursor: pointer;
 }
 .vacancies_container .flex_container {
     flex-wrap: wrap;
@@ -2226,9 +2496,10 @@ footer p, footer a {
         margin-bottom: 44px;
     }
     .vacancies_container .category_list li {
+        height: 34px;
         margin-right: 8px;
         font-size: 14px;
-        line-height: 18px;
+        line-height: 38px;
     }
     .vacancies_container .flex_container {
         margin-bottom: 130px;
@@ -2251,7 +2522,7 @@ footer p, footer a {
     }
     .vacancies_container .category_list li {
         margin-right: 4px;
-        padding: 8px 10px;
+        padding: 0 10px;
     }
     .vacancies_container .flex_container {
         margin-bottom: 50px;
@@ -2368,7 +2639,7 @@ footer p, footer a {
 /**************************** modal windows styles ****************************************/
 .join_us_modal.modal_window, .contact_us_modal.modal_window, .apply_position_modal.modal_window {
     position: fixed;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -2390,12 +2661,16 @@ footer p, footer a {
 }
 .modal_window .close {
     width: 60px;
+    height: 60px;
     position: absolute;
     top: 40px;
     right: 0;
+    background-image: url(../img/close-square.png);
+    background-size: cover;
+    transition: all 0.3s;
 }
-.modal_window .close img {
-    width: 60px;
+.modal_window .close:hover {
+    background-image: url(../img/close-hovered.png);    
 }
 .modal_window form input, .modal_window textarea, .upload_file label {
     width: 899px;
@@ -2406,18 +2681,24 @@ footer p, footer a {
     outline: none;
     border: none;
     margin-bottom: 40px;
-    padding: 54px 60px;
+    padding: 70px 60px 38px;
     font-weight: 400;
     font-size: 28px;
-    line-height: 32px;
+    line-height: 36px;
     color: #FFFFFF;
+}
+.modal_window form div {
+    position: relative;
 }
 .modal_window form input:focus, .modal_window textarea:focus {
     border: 1px solid #FFFFFF;
 }
 .upload_file label {
+    padding: 54px 60px;
     position: absolute;
     box-sizing: border-box;
+    top: unset !important;
+    left: unset !important;
     z-index: 2;
 }
 .upload_file label:after {
@@ -2435,10 +2716,29 @@ footer p, footer a {
     opacity: 0;
     z-index: 2;
 }
+.modal_window .textarea_field {
+    width: 100%;
+}
 .modal_window textarea {
     width: 100% !important;
     height: 320px;
     margin-bottom: 0;
+    resize: none;
+}
+.modal_window form label {
+    position: absolute;
+    top: 56px;
+    left: 60px;
+    font-size: 28px;
+}
+input:focus + label, textarea:focus + label, input:not(:placeholder-shown) + label, textarea:not(:placeholder-shown) + label {
+    transition: all 0.3s;
+    transform-origin: left top;
+    transform: translate(0, -30px);
+    font-size: 20px;
+}
+::placeholder {
+    color: #229EFF;
 }
 .join_us_modal .first_modal, .join_us_modal .second_modal {
     display: flex;
@@ -2451,11 +2751,11 @@ footer p, footer a {
     background: #229EFF;
     border-radius: 42px;
     position: absolute;
-    top: 18px;
-    left: 480px;
+    top: 8px;
+    left: 415px;
     font-weight: 500;
     font-size: 58px;
-    line-height: 100px;
+    line-height: 110px;
     color: #FFFFFF;
     text-align: center;
 }
@@ -2465,28 +2765,13 @@ footer p, footer a {
 .join_us_modal .second_modal:before {
     content: "2/2";
 }
-::placeholder {
-    color: #FFFFFF;
-    opacity: 0.9;
-}
 .modal_window form p {
     position: relative;
-}
-.modal_window form p.email_inpt label {
-    position: absolute;
-    top: 24px;
-    left: 60px;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;
-}
-.modal_window form p.email_inpt input {
-    padding-top: 70px;
 }
 .modal_window .next_btn, .modal_window .submit, .modal_window .back_btn {
     font-weight: 700;
     font-size: 28px;
-    line-height: 96px;
+    line-height: 98px;
     color: #008EFF;
     background: #FFFFFF;
     border-radius: 92px;
@@ -2498,11 +2783,13 @@ footer p, footer a {
     margin-top: 134px;
     margin-right: 30px;
     float: left;
+    cursor: pointer;
 }
 .modal_window .back_btn {
     color: #FFFFFF;
     border: 2px solid #FFFFFF;
     background: unset;
+    line-height: 94px !important;
 }
 .contact_us_modal {
     display: none;
@@ -2519,6 +2806,23 @@ footer p, footer a {
     position: absolute;
     bottom: 0;
 }
+p.required_fields_notice {
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+}
+span.error {
+    position: absolute;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #003E70;
+    bottom: 2px;
+    left: 24px;
+}
 @media(max-width: 2560px) {
     .modal_window .wrap {
         width: 1094px;
@@ -2533,9 +2837,22 @@ footer p, footer a {
         height: 82px;
         margin-bottom: 24px;
         font-size: 16px;
-        line-height: 18px;
-        padding: 32px 24px;
+        line-height: 22px;
+        padding: 40px 36px 24px;
         border-radius: 12px;
+    }
+    .upload_file label {
+        padding: 32px 24px;
+    }
+    .modal_window form label {
+        position: absolute;
+        top: 36px;
+        left: 36px;
+        font-size: 16px;
+    }
+    input:focus + label, textarea:focus + label, input:not(:placeholder-shown) + label, textarea:not(:placeholder-shown) + label {
+        transform: translate(0, -16px);
+        font-size: 12px;
     }
     .modal_window form p.email_inpt input {
         padding-top: 40px;
@@ -2558,12 +2875,15 @@ footer p, footer a {
     }
     .modal_window .next_btn, .modal_window .submit, .modal_window .back_btn {
         font-size: 18px;
-        line-height: 62px;
+        line-height: 66px;
         border-radius: 52px;
         width: 196px;
         height: 64px;
         margin-top: 72px;
         margin-right: 24px;
+    }
+    .modal_window .back_btn {
+        line-height: 62px !important;
     }
     .modal_window textarea {
         height: 188px;
@@ -2575,10 +2895,15 @@ footer p, footer a {
         width: 82px;
         height: 60px;
         border-radius: 24px;
-        top: 8px;
-        left: 274px;
+        top: 2px;
+        left: 236px;
         font-size: 36px;
-        line-height: 60px;
+        line-height: 66px;
+    }
+    p.required_fields_notice {
+        bottom: 18px;
+        font-size: 16px;
+        line-height: 20px;
     }
 }
 @media(max-width: 1440px) {
@@ -2593,8 +2918,12 @@ footer p, footer a {
     .modal_window form input, .upload_file label, .modal_window textarea {
         width: 359px;
     }
-    .modal_window .close img {
+    .modal_window .close {
         width: 44px;
+        height: 44px;
+    }
+    .upload_file label {
+        padding: 32px 24px;
     }
     .upload_file label:after {
         width: 24px;
@@ -2610,6 +2939,9 @@ footer p, footer a {
         margin-top: 80px;
         margin-right: 30px;
     }
+    .modal_window .back_btn {
+        line-height: 52px !important;
+    }
     .modal_window textarea {
         height: 194px;
     }
@@ -2620,10 +2952,13 @@ footer p, footer a {
         width: 56px;
         height: 42px;
         border-radius: 16px;
-        top: 6px;
-        left: 186px;
+        left: 160px;
         font-size: 24px;
-        line-height: 42px;
+        line-height: 46px;
+    }
+    p.required_fields_notice {
+        font-size: 14px;
+        line-height: 18px;
     }
 }
 @media(max-width: 1024px) {
@@ -2659,20 +2994,12 @@ footer p, footer a {
         line-height: 32px;
         margin-bottom: 68px;
     }
-    .modal_window .close img {
+    .modal_window .close {
         width: 32px;
+        height: 32px;
     }
-    .modal_window form p.email_inpt label {
-        top: 14px;
-        left: 14px;
-        font-size: 14px;
-        line-height: 16px;
-    }
-    .modal_window form p.email_inpt input {
-        padding-top: 14px;
-    }
-    .modal_window form p.email_inpt input::placeholder {
-        visibility: hidden;
+    .modal_window form div {
+        width: 100%;
     }
     .modal_window form input, .upload_file label, .modal_window textarea {
         width: 100%;
@@ -2680,8 +3007,23 @@ footer p, footer a {
         margin-bottom: 16px;
         padding: 14px;
         font-size: 14px;
-        line-height: 16px;
+        line-height: 20px;
         border-radius: 6px;
+    }
+    .modal_window form label {
+        position: absolute;
+        top: 16px;
+        left: 14px;
+        font-size: 14px;
+        visibility: visible;
+    }
+    input:focus + label, textarea:focus + label, input:not(:placeholder-shown) + label, textarea:not(:placeholder-shown) + label {
+        transform: translate(0);
+        visibility: hidden;
+        transition: all 0s;
+    }
+    .modal_window textarea {
+        height: 190px;
     }
     .modal_window form p {
         width: 100%;
@@ -2697,20 +3039,206 @@ footer p, footer a {
         right: 14px;
     }
     .modal_window .next_btn, .modal_window .submit, .modal_window .back_btn {
-        margin-top: 54px;
+        margin: 54px auto 0;
         font-size: 14px;
         line-height: 16px;
         width: 288px;
     }
+    .join_us_modal .next_btn, .join_us_modal .submit, .join_us_modal .back_btn {
+        width: 134px;
+    }
+    .join_us_modal .submit {
+        margin-right: 20px;
+        position: relative;
+        left: calc(50% - 144px);
+    }
+    .join_us_modal .back_btn {
+        position: relative;
+        left: calc(50% - 144px);
+    }
     .apply_position_modal form {
-        margin-bottom: 218px;
+        margin-bottom: 160px;
+    }
+    .apply_position_modal .submit {
+        left: calc(50% - 144px);
     }
     .join_us_modal .first_modal:before, .join_us_modal .second_modal:before {
         width: 38px;
         height: 32px;
-        top: 0px;
-        left: 124px;
+        top: -1px;
+        left: 102px;
         font-size: 12px;
-        line-height: 32px;
+        line-height: 36px;
+    }
+    p.required_fields_notice {
+        right: unset;
+        text-align: center;
+        width: 80%;
+        left: calc(50% - 40%);
+        bottom: 80px;
+    }
+    p.required_fields_notice.join_us_second_notice {
+        bottom: 70px;
     }
 }
+/*********************** cookie modal styles **********************/
+.cookie_modal {
+    display: none;
+    width: 1033px;
+    height: 344px;
+    position: fixed;
+    left: 44px;
+    bottom: 44px;
+    padding: 44px;
+    background: #FFFFFF;
+    border-radius: 64px;
+    color: #000000;
+    box-sizing: border-box;
+    z-index: 3;
+}
+.cookie_modal h2 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 36px;
+    margin-bottom: 24px;
+}
+.cookie_modal p {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 44px;
+}
+.cookie_modal .accept_all, .cookie_modal a, .cookie_modal a:hover {
+    display: inline-block;
+    height: 96px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 98px;
+    color: #FFFFFF;
+    background: #008EFF;
+    border-radius: 62px;
+    transition: all 0.3s;
+    padding: 0 30px;
+    margin-right: 30px;
+}
+.cookie_modal a {
+    background: none;
+    color: #008EFF;
+    line-height: 96px;
+}
+.cookie_modal a:hover {
+    line-height: 102px;
+}
+@media(max-width: 2560px) {
+    .cookie_modal {
+        width: 562px;
+        height: 234px;
+        left: 32px;
+        bottom: 32px;
+        padding: 32px;
+        border-radius: 42px;
+    }
+    .cookie_modal h2 {
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 6px;
+    }
+    .cookie_modal p {
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 24px;
+    }
+    .cookie_modal .accept_all, .cookie_modal a, .cookie_modal a:hover {
+        height: 56px;
+        font-size: 18px;
+        line-height: 58px;
+        padding: 0 20px;
+        margin-right: 12px;
+    }
+    .cookie_modal a:hover {
+        line-height: 60px;
+    }
+}
+@media(max-width: 1440px) {
+    .cookie_modal {
+        width: 395px;
+        height: 226px;
+        left: 24px;
+        bottom: 24px;
+        border-radius: 42px;
+    }
+    .cookie_modal h2 {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .cookie_modal p {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+@media(max-width: 1024px) {
+    .cookie_modal {
+        width: 586px;
+        height: 208px;
+    }
+}
+@media(max-width: 768px) {
+    .cookie_modal {
+        width: 90%;
+        height: auto;
+        left: calc(50% - 45%);
+        bottom: 16px;
+        padding: 32px 24px;
+    }
+    .cookie_modal p {
+        margin-bottom: 20px;
+    }
+    .cookie_modal .accept_all, .cookie_modal a, .cookie_modal a:hover {
+        height: 44px;
+        font-size: 14px;
+        line-height: 44px;
+        padding: 0 18px;
+    }
+    .cookie_modal a {
+        line-height: 44px;
+        padding: 0 14px;
+        margin-right: 0;
+    }
+    .cookie_modal a:hover {
+        padding: 0 14px;
+        margin-right: 0;
+        line-height: 48px;
+    }
+}
+/************* slider scroll-bar ****************/
+.slider-progress {
+    text-align: center;
+    width: 712px;
+}  
+input[type=range]{
+    -webkit-appearance: none;
+    width: 712px;
+}
+  
+  input[type=range]::-webkit-slider-runnable-track {
+      width: 712px;
+      height: 4px;
+      background: #86C9FF;
+      border: none;
+      border-radius: 4px;
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      border: none;
+      height: 9px;
+      width: 256px;
+      border-radius: 12px;
+      background: #008EFF;
+      margin-top: -3px;
+      cursor: pointer;
+  }
+  
+  input[type=range]:focus {
+      outline: none;
+  }

@@ -3,6 +3,7 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="icon" href="img/favicon.ico">
 		<link rel="stylesheet" href="css/styles.css" type="text/css"/> 
 		<link rel="stylesheet" href="fonts/fonts.css">
 		<title>MyContainer</title>
@@ -16,7 +17,7 @@
 					</div>
 					<nav class="header_navigation">
 						<ul>
-							<li><a href="#">About</a></li>
+							<li><a href="index.html">About</a></li>
 							<li><a href="vacancies.html">Vacancies</a></li>
 							<li><a href="team.html">Team</a></li>
 							<li class="contact_us_triger"><a href="#">Contact us</a></li>
@@ -26,7 +27,7 @@
 				</div>
 				<nav class="header_navigation_mobile">
 					<ul>
-						<li><a href="#">About</a></li>
+						<li><a href="index.html">About</a></li>
 						<li><a href="vacancies.html">Vacancies</a></li>
 						<li><a href="team.html">Team</a></li>
 						<li class="contact_us_triger"><a href="#">Contact us</a></li>
@@ -79,25 +80,42 @@
 						<img src="img/logo_footer.svg" alt="MYCONTAINER">
 					</div>
 					<ul>
-						<li><a href="#">Privacy policy</a></li>
+						<li><a href="privacy_policy.html">Privacy policy</a></li>
 					</ul>
 				</div>
 			</div>
 		</footer>
+		<!-- cookie_modal -->
+		<div class="cookie_modal">
+			<h2>Hey, hey!</h2>
+			<p>We use cookies for some... you know... things. You can check them by the link below or just press that accept button, we don’t work with CIA anyway.</p>
+			<div class="btns_cookie">
+				<button class="accept_all">Accept all</button>
+				<a href="">Cookie Policy</a>
+			</div>
+		</div>
+		<!-- end cookie_modal -->
 		<!-- contact us modal window -->
 		<div class="contact_us_modal modal_window blue_bg">
 			<div class="wrap">
 				<h2>Contact us</h2>
-				<button class="close"><img src="img/close-square.svg" alt="x"></button>
+				<button class="close"></button>
 				<form action="#">
-					<input type="text" placeholder="Full name*" id="Name">
-					<p class="email_inpt">
-						<label for="Email">Email*</label>
-						<input type="email" placeholder="example@gmail.com" id="Email">
-					</p>
-					<textarea name="textarea" id="textarea"  placeholder="Comment"></textarea>
+					<div>
+						<input type="text" id="NameContact" placeholder="Full name*">
+						<label for="NameContact">Full name*</label>
+					</div>
+					<div>
+						<input type="email" id="EmailContact" placeholder="Email*">
+						<label for="EmailContact">Email*</label>
+					</div>
+					<div class="textarea_field">
+						<textarea name="textarea" id="textarea" placeholder="Comment"></textarea>
+						<label for="textarea">Comment</label>
+					</div>
 					<input type="submit" class="submit" value="Submit">
 				</form>
+				<p class="required_fields_notice">*Required fields</p>
 			</div>
 		</div>
 		<!-- end contact us modal window -->
