@@ -336,6 +336,7 @@ header {
     margin-bottom: -110px;
     position: relative;
     background-color: #FFFFFF;
+    padding-bottom: 318px;
 }
 .hot_positions_slider h2 {
     font-weight: 500;
@@ -353,18 +354,12 @@ header {
     top: 20px;
     position: relative;
 }
-.hot_positions_slider .bx-wrapper {
-    max-width: unset !important;
-}
-.hot_positions_slider .bx-viewport {
-    width: 210% !important;
+.hot_positions_slider .slick-track {
     padding: 40px 30px;
     margin-left: -30px;
-    margin-bottom: 318px;
-    overflow-x: scroll;
 }
-.hot_positions_slider .slide, .vacancies_container .flex_container div {
-    display: flex;
+.hot_positions_slider .slider .slick-slide div div, .vacancies_container .flex_container div {
+    display: flex !important;
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
@@ -375,11 +370,9 @@ header {
     background: #FFFFFF;
     box-shadow: 0px 14px 34px rgb(0 0 0 / 6%);
     border-radius: 12px;
+    pointer-events: none;
 }
-.hot_positions_slider .slide.bx-clone {
-    opacity: 0;
-}
-.hot_positions_slider .slide .category, .vacancies_container .flex_container div .category {
+.hot_positions_slider  .slider div .category, .vacancies_container .flex_container div .category {
     width: fit-content;
     padding: 0 22px;
     height: 60px;
@@ -391,68 +384,33 @@ header {
     background: #EAF1F7;
     border-radius: 17.7778px;
 }
-.hot_positions_slider .slide h3, .vacancies_container .flex_container div h3 {
+.hot_positions_slider  .slider div h3, .vacancies_container .flex_container div h3 {
     font-weight: 700;
     font-size: 64px;
     line-height: 72px;
 }
-.hot_positions_slider .slide .read_more, .vacancies_container .flex_container div .read_more {
+.hot_positions_slider  .slider div .read_more, .vacancies_container .flex_container div .read_more {
     font-weight: 400;
     font-size: 24px;
     line-height: 32px;
     color: #40576C;
+    z-index: 2;
+    pointer-events: all;
     transition: all 0.3s;
 }
-.hot_positions_slider .slide .read_more:hover {
+.hot_positions_slider  .slider div .read_more:hover {
     color: #274662;
 }
-.hot_positions_slider .slide .read_more img, .vacancies_container .flex_container div .read_more img {
+.hot_positions_slider  .slider div .read_more img, .vacancies_container .flex_container div .read_more img {
     margin-left: 20px;
     position: relative;
     top: 5px;
+    display: inline;
 }
-.hot_positions_slider .bx-controls.bx-has-controls-direction.bx-has-pager {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    position: relative;
-    top: -158px;
-}
-.hot_positions_slider .bx-pager {
-    display: flex;
-    justify-content: flex-start;
-    width: 712px;
-    height: 4px;
-    background: #86C9FF;
-    border-radius: 4px;
-    margin-right: 1294px;
-}
-.hot_positions_slider .bx-pager-item {
-    width: 12.5%;
-}
-.hot_positions_slider a.bx-pager-link.active {
-    width: 100%;
-    height: 8px;
-    background: #008EFF;
-    border-radius: 4px;
-    position: relative;
-    top: -3px;
-}
-.hot_positions_slider a.bx-pager-link {
-    width: 100%;
-    font-size: 0;
-    height: 8px;
-    display: block;
-}
-.hot_positions_slider .bx-controls-direction {
-    display: flex;
-    justify-content: space-between;
-    width: 188px;
-    position: relative;
-    top: -32px;
-    margin-bottom: -32px;
-}
-.hot_positions_slider .bx-controls-direction a {
+.hot_positions_slider .slick-arrow {
+    position: absolute;
+    right: 0;
+    bottom: -180px;
     font-size: 0;
     width: 65px;
     height: 65px;
@@ -461,12 +419,48 @@ header {
     background-size: cover;
     opacity: 0.5;
     transition: all 0.3s;
+    z-index: 3;
 }
-.hot_positions_slider .bx-controls-direction a:hover {
+.hot_positions_slider .slick-arrow:hover {
     opacity: 1;
 }
-.hot_positions_slider .bx-controls-direction a.bx-prev {
+.hot_positions_slider button.slick-prev.slick-arrow {
     transform: rotate(180deg);
+    right: 120px;
+}
+.slick-list {
+    overflow: visible;
+}
+/************* slider scroll-bar ****************/
+.slider-progress {
+    text-align: center;
+    width: 712px;
+    position: absolute;
+    bottom: 164px;
+}  
+input[type=range]{
+    -webkit-appearance: none;
+    width: 712px;
+}  
+input[type=range]::-webkit-slider-runnable-track {
+    width: 712px;
+    height: 4px;
+    background: #86C9FF;
+    border: none;
+    border-radius: 4px;
+}  
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 9px;
+    width: 256px;
+    border-radius: 12px;
+    background: #008EFF;
+    margin-top: -3px;
+    cursor: pointer;
+}  
+input[type=range]:focus {
+    outline: none;
 }
 /**** footer styles *****/
 footer {
@@ -519,12 +513,111 @@ footer {
     margin-bottom: 168px;
     border-radius: 100px;
     overflow: hidden;
+    position: relative;
 }
-.map_container .map_wrap img {
+.map_container .map_wrap svg {
     width: 100%;
+    height: auto;
+}
+.map_container .map_wrap .map_marks .map_mark {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    line-height: 38px;
+    background: #E9E124;
+    color: #000000;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+a.map_mark.romania {
+    top: 46.5%;
+    left: 56.5%;
+}
+a.map_mark.ghana {
+    top: 64.3%;
+    left: 49.5%;
+}
+a.map_mark.azerbaijan {
+    top: 49.5%;
+    left: 62.5%;
+}
+a.map_mark.greece {
+    top: 50%;
+    left: 55.5%;
+}
+a.map_mark.estonia {
+    top: 37.5%;
+    left: 56.5%;
+}
+a.map_mark.phillipines {
+    top: 63%;
+    right: 15%;
+}
+a.map_mark.uae {
+    top: 57.5%;
+    left: 64.5%;
+}
+a.map_mark.latvia {
+    top: 39%;
+    left: 56.3%;
+}
+a.map_mark.ethiopia {
+    top: 64%;
+    left: 60.5%;
 }
 footer .flex_container {
     align-items: center;
+}
+a.map_mark.lithuania {
+    top: 40.3%;
+    left: 56%;
+}
+a.map_mark.iran {
+    top: 53.2%;
+    left: 64.6%;
+}
+a.map_mark.kyrgyzstan {
+    top: 48.8%;
+    right: 28.2%;
+}
+a.map_mark.uk {
+    top: 42%;
+    left: 49%;
+}
+a.map_mark.czech_rep {
+    top: 44%;
+    left: 53.8%;
+}
+a.map_mark.georgia {
+    top: 48.5%;
+    left: 61.5%;
+}
+a.map_mark.indonesia {
+    top: 69%;
+    right: 15.5%;
+}
+a.map_mark.ukraine {
+    top: 44.5%;
+    left: 58.5%;
+}
+a.map_mark.poland {
+    top: 42.5%;
+    left: 55%;
+}
+span.map_mark_country_title {
+    position: absolute;
+    left: 50px;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #FFFFFF;
+    border-radius: 14px;
+    text-align: center;
+    top: 3px;
+    z-index: 3;
 }
 footer .flex_container ul {
     display: flex;
@@ -720,6 +813,7 @@ footer p, footer a {
     .hot_positions_slider {
         border-radius: 80px;
         margin-bottom: -70px;
+        padding-bottom: 172px;
     }
     .hot_positions_slider h2 {
         font-size: 64px;
@@ -733,53 +827,56 @@ footer p, footer a {
         top: 10px;
         background-size: cover;
     }
-    .hot_positions_slider .slide, .vacancies_container .flex_container div {
+    .hot_positions_slider  .slider .slick-slide div div, .vacancies_container .flex_container div {
         padding: 24px 24px 28px;
         width: 308px !important;
         height: 324px;
     }
-    .hot_positions_slider .slide .category, .vacancies_container .flex_container div .category {
+    .hot_positions_slider  .slider div .category, .vacancies_container .flex_container div .category {
         padding: 0 12px;
         height: 34px;
         font-size: 14px;
         line-height: 38px;
         border-radius: 10px;
     }
-    .hot_positions_slider .slide h3, .vacancies_container .flex_container div h3 {
+    .hot_positions_slider  .slider div h3, .vacancies_container .flex_container div h3 {
         font-size: 36px;
         line-height: 40px;
     }
-    .hot_positions_slider .slide .read_more, .vacancies_container .flex_container div .read_more {
+    .hot_positions_slider  .slider div .read_more, .vacancies_container .flex_container div .read_more {
         font-size: 14px;
         line-height: 18px;
     }
-    .hot_positions_slider .slide .read_more img, .vacancies_container .flex_container div .read_more img {
+    .hot_positions_slider  .slider div .read_more img, .vacancies_container .flex_container div .read_more img {
         margin-left: 10px;
         position: relative;
         width: 12px;
         top: 2px;
     }
-    .hot_positions_slider .bx-viewport {
-        margin-bottom: 132px;
-    }
-    .hot_positions_slider .bx-controls.bx-has-controls-direction.bx-has-pager {
-        top: -85px;
-    }
-    .hot_positions_slider .bx-pager {
-        width: 432px;
-        height: 2px;
-        border-radius: 2px;
-        margin-right: 780px;
-    }
-    .hot_positions_slider .bx-controls-direction a {
+    .hot_positions_slider .slick-arrow {
         width: 44px;
         height: 44px;
+        bottom: -84px;
     }
-    .hot_positions_slider .bx-controls-direction {    
-        width: 118px;
-        top: -18px;
-        margin-bottom: -42px;
+    .hot_positions_slider button.slick-prev.slick-arrow {
+        right: 68px;
     }
+    .slider-progress {
+        width: 432px;
+        bottom: 104px;
+    }
+    input[type=range] {
+        width: 432px;
+    }     
+    input[type=range]::-webkit-slider-runnable-track {
+        width: 432px;
+        height: 2px;
+    }  
+    input[type=range]::-webkit-slider-thumb {
+        height: 5px;
+        width: 144px;
+        margin-top: -2px;
+    }  
     footer {
         padding: 204px 0 34px;
     }
@@ -811,6 +908,12 @@ footer p, footer a {
     .map_container .map_wrap {
         margin-bottom: 134px;
     }
+    span.map_mark_country_title {
+        left: 30px;
+        width: 90px;
+        height: 20px;
+        line-height: 24px;
+    }
     .logo_footer img {
         width: 195px;
     }
@@ -820,6 +923,12 @@ footer p, footer a {
     footer p, footer a {        
         font-size: 16px;
         line-height: 20px;
+    }
+    .map_container .map_wrap .map_marks .map_mark {
+        width: 26px;
+        height: 26px;
+        font-size: 14px;
+        line-height: 29px;
     }
 }
 @media(max-width: 1440px) {
@@ -939,24 +1048,27 @@ footer p, footer a {
         height: 48px;
         top: 8px;
     }
-    .hot_positions_slider .slide, .vacancies_container .flex_container div {
+    .hot_positions_slider  .slider .slick-slide div div, .vacancies_container .flex_container div {
         width: 204px !important;
         height: 232px;
     }
-    .hot_positions_slider .slide h3, .vacancies_container .flex_container div h3 {
+    .hot_positions_slider  .slider div h3, .vacancies_container .flex_container div h3 {
         font-size: 24px;
         line-height: 28px;
     }
-    .hot_positions_slider .bx-pager {
-        width: 288px;
-        margin-right: 506px;
-    }
-    .hot_positions_slider .bx-controls-direction a {
+    .hot_positions_slider .slick-arrow {
         width: 36px;
         height: 36px;
+        bottom: -81px;
     }
-    .hot_positions_slider .bx-controls-direction {
-        width: 102px;
+    .hot_positions_slider button.slick-prev.slick-arrow {
+        right: 62px;
+    }
+    .slider-progress {
+        width: 288px;
+    }    
+    input[type=range] {
+        width: 288px;
     }
     footer {
         padding: 184px 0 32px;
@@ -991,6 +1103,19 @@ footer p, footer a {
     .map_container .map_wrap {
         border-radius: 62px;
         margin-bottom: 114px;
+    }
+    .map_container .map_wrap .map_marks .map_mark {
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+        line-height: 22px;
+    }
+    span.map_mark_country_title {
+        left: 25px;
+        width: 74px;
+        height: 16px;
+        line-height: 17px;
+        top: 2px;
     }
     .logo_footer img {
         width: 126px;
@@ -1072,13 +1197,10 @@ footer p, footer a {
     .missions_container .targets_container ul {
         margin-bottom: 170px;
     }
-    .hot_positions_slider .slide, .vacancies_container .flex_container div {
+    .hot_positions_slider  .slider .slick-slide div div, .vacancies_container .flex_container div {
         width: 219px !important;
         height: 232px;
         margin-right: 16px;
-    }
-    .hot_positions_slider .bx-pager {
-        margin-right: 290px;
     }
     .logo_footer {
         position: absolute;
@@ -1280,6 +1402,7 @@ footer p, footer a {
     .hot_positions_slider {
         border-radius: 40px;
         margin-bottom: -70px;
+        padding-bottom: 94px;
     }
     .hot_positions_slider h2 {
         font-size: 28px;
@@ -1292,28 +1415,27 @@ footer p, footer a {
         top: 6px;
         margin-left: 16px;
     }
-    .hot_positions_slider .slide {
+    .hot_positions_slider .slick-track {
+        margin-left: 0;
+    }
+    .hot_positions_slider  .slider .slick-slide div div {
         width: 252px !important;
         height: 264px;
     }
-    .hot_positions_slider .slide h3, .vacancies_container .flex_container div h3 {
+    .hot_positions_slider  .slider div h3, .vacancies_container .flex_container div h3 {
         font-size: 20px;
         line-height: 22px;
     }
-    .hot_positions_slider .bx-viewport {
-        margin-bottom: 92px;
-    }
-    .hot_positions_slider .bx-controls.bx-has-controls-direction.bx-has-pager {
-        top: -65px;
-    }
-    .hot_positions_slider .bx-pager {
-        margin-right: 0;
-        width: 288px;
-        top: 65px;
-    }
-    .hot_positions_slider .bx-controls-direction {
-        display: none;
+    .hot_positions_slider .slick-arrow {
+        display: none !important;
     }  
+    .slider-progress {
+        width: 90%;
+        bottom: 65px;
+    }
+    input[type=range] {
+        width: 100%;
+    }
     .home_page footer {
         padding-top: 130px;
     }
@@ -1347,6 +1469,19 @@ footer p, footer a {
     .map_container .map_wrap {
         border-radius: 40px;
         margin-bottom: 80px;
+    }
+    .map_container .map_wrap .map_marks .map_mark {
+        width: 12px;
+        height: 12px;
+        font-size: 8px;
+        line-height: 14px;
+    }
+    span.map_mark_country_title {
+        left: 16px;
+        width: 55px;
+        height: 13px;
+        line-height: 14px;
+        top: -1px;
     }
     .logo_footer {
         bottom: 126px;
@@ -1556,7 +1691,13 @@ footer p, footer a {
     line-height: 28px;
  }
  .privacy_content p, .main_ppc_content p {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
     margin-bottom: 24px;
+ }
+ .privacy_content p b, .main_ppc_content p b {
+    font-weight: 500;
  }
  .privacy_content ul, .main_ppc_content ul {
     margin-bottom: 44px;
@@ -1598,11 +1739,16 @@ footer p, footer a {
         width: 645px;
     }
     .privacy_content h2, .main_ppc_content h2 {
-        font-size: 20px;
-        line-height: 24px;
+        font-size: 24px;
+        line-height: 32px;
         margin-bottom: 16px;
     }
-    .privacy_content li, .main_ppc_content li {
+    .privacy_content h3, .main_ppc_content h3 {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 16px;
+    }
+    .privacy_content li, .main_ppc_content li, .privacy_content p, .main_ppc_content p {
         margin-bottom: 8px;
         font-size: 16px;
         line-height: 20px;
@@ -1626,10 +1772,14 @@ footer p, footer a {
         width: 438px;
     }
     .privacy_content h2, .main_ppc_content h2 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .privacy_content h3, .main_ppc_content h3 {
         font-size: 18px;
         line-height: 22px;
     }
-    .privacy_content li, .main_ppc_content li {
+    .privacy_content li, .main_ppc_content li, .privacy_content p, .main_ppc_content p {
         margin-bottom: 10px;
         font-size: 14px;
         line-height: 18px;
@@ -1676,6 +1826,10 @@ footer p, footer a {
         width: 90%;
     }
     .privacy_content h2, .main_ppc_content h2 {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .privacy_content h3, .main_ppc_content h3 {
         font-size: 16px;
         line-height: 20px;
     }
@@ -2220,6 +2374,7 @@ footer p, footer a {
  .ppc_manager_page .hot_positions_slider {
     background: #F1F6FA;
     border-radius: 140px 140px 0 0;
+    padding-bottom: 424px;
  }
  .ppc_manager_page .hot_positions_slider h2 {
     width: 1174px;
@@ -2227,12 +2382,8 @@ footer p, footer a {
  .ppc_manager_page .hot_positions_slider h2:after {
     display: none;
  }
- .ppc_manager_page .hot_positions_slider .bx-viewport {
-    margin-bottom: 440px;
- }
- .ppc_manager_page .hot_positions_slider .bx-controls.bx-has-controls-direction.bx-has-pager {
-    top: -278px;
-    z-index: 3;
+ .ppc_manager_page .hot_positions_slider .slider-progress {
+    bottom: 270px;
  }
  @media (max-width: 2560px) {
     .ppc_manager_page .header_content {
@@ -2264,15 +2415,16 @@ footer p, footer a {
     }
     .ppc_manager_page .hot_positions_slider {
         border-radius: 80px 80px 0 0;
+        padding-bottom: 278px;
     }
     .ppc_manager_page .hot_positions_slider h2 {
         width: 778px;
     }
-    .ppc_manager_page .hot_positions_slider .bx-viewport {
-        margin-bottom: 238px;
+    .ppc_manager_page .hot_positions_slider .slider-progress {
+        bottom: 192px;
     }
-    .ppc_manager_page .hot_positions_slider .bx-controls.bx-has-controls-direction.bx-has-pager {
-        top: -175px;
+    .ppc_manager_page .hot_positions_slider .slick-arrow {
+        bottom: -103px;
     }
  }
  @media (max-width: 1440px) {
@@ -2297,16 +2449,19 @@ footer p, footer a {
     }
     .ppc_manager_page .header_content a {
         margin-bottom: 160px;
+    }    
+    .ppc_manager_page .hot_positions_slider {
+        padding-bottom: 220px;
     }
     .ppc_manager_page .hot_positions_slider h2 {
         width: 514px;
         margin-bottom: 0;
     }
-    .ppc_manager_page .hot_positions_slider .bx-viewport {
-        margin-bottom: 182px;
+    .ppc_manager_page .hot_positions_slider .slider-progress {
+        bottom: 160px;
     }
-    .ppc_manager_page .hot_positions_slider .bx-controls.bx-has-controls-direction.bx-has-pager {
-        top: -156px;
+    .ppc_manager_page .hot_positions_slider .slick-arrow {
+        bottom: -73px;
     }
  }
  @media (max-width: 1024px) {
@@ -2330,12 +2485,6 @@ footer p, footer a {
     .ppc_manager_page .hot_positions_slider h2 {
         width: 514px;
         margin-bottom: 0;
-    }
-    .ppc_manager_page .hot_positions_slider .bx-viewport {
-        margin-bottom: 162px;
-    }
-    .ppc_manager_page .hot_positions_slider .bx-controls.bx-has-controls-direction.bx-has-pager {
-        top: -136px;
     }
  }
  @media (max-width: 768px) {
@@ -2373,16 +2522,14 @@ footer p, footer a {
     }
     .ppc_manager_page .hot_positions_slider {
         border-radius: 40px 40px 0 0;
+        padding-bottom: 200px;
     }
     .ppc_manager_page .hot_positions_slider h2 {
         width: 100%;
         margin-bottom: -20px;
     }
-    .ppc_manager_page .hot_positions_slider .bx-viewport {
-        margin-bottom: 162px;
-    }
-    .ppc_manager_page .hot_positions_slider .bx-controls.bx-has-controls-direction.bx-has-pager {
-        top: -136px;
+    .ppc_manager_page .hot_positions_slider .slider-progress {
+        bottom: 148px;
     }
  }
  /************************************** vacancies styles **************************************/
@@ -3083,7 +3230,8 @@ span.error {
 }
 /*********************** cookie modal styles **********************/
 .cookie_modal {
-    display: none;
+    display: block;
+    opacity: 0;
     width: 1033px;
     height: 344px;
     position: fixed;
@@ -3210,35 +3358,3 @@ span.error {
         line-height: 48px;
     }
 }
-/************* slider scroll-bar ****************/
-.slider-progress {
-    text-align: center;
-    width: 712px;
-}  
-input[type=range]{
-    -webkit-appearance: none;
-    width: 712px;
-}
-  
-  input[type=range]::-webkit-slider-runnable-track {
-      width: 712px;
-      height: 4px;
-      background: #86C9FF;
-      border: none;
-      border-radius: 4px;
-  }
-  
-  input[type=range]::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      border: none;
-      height: 9px;
-      width: 256px;
-      border-radius: 12px;
-      background: #008EFF;
-      margin-top: -3px;
-      cursor: pointer;
-  }
-  
-  input[type=range]:focus {
-      outline: none;
-  }

@@ -4,11 +4,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<link rel="icon" href="img/favicon.ico">
+		<link rel="stylesheet" href="css/slick.css">
 		<link rel="stylesheet" href="css/styles.css" type="text/css"/> 
 		<link rel="stylesheet" href="fonts/fonts.css">
 		<title>MyContainer</title>
 	</head>
-	<body class="vacancies_page">
+	<body class="ppc_manager_page">
 		<header>
 			<div class="header_wrap">
 				<div class="wrap">
@@ -36,43 +37,86 @@
 			</div>
 			<div class="header_content">
 				<div class="wrap">
-					<h1>Vacancies</h1>
+					<a href="#" class="back_btn" onclick="history.back();return false;"><img src="img/arrow-left.svg" alt="<">Back</a>
+					<h1>PPC manager</h1>
+					<p>We are currently looking for a PPC Specialist who will be involved in developing promotion strategy for the project.</p>
+					<a class="apply_position_triger" href="#">Apply to this position</a>
 				</div>
 			</div>
 		</header>
-		<section class="vacancies_container white_bg">
-			<div class="ic_mouse">
-				<div class="pulse">
-					<img src="img/ic_Mouse.svg" alt="ic_mouse">
+		<section class="main_ppc_content white_bg">
+			<div class="wrap">
+				<div id="AQAEngineer vacancy_content">
+					<h2>Middle/Senior AQA Engineer</h2>
+					<p><b>We’re looking for a Senior AQA Engineer to join our rapidly growing company. This role is a unique opportunity to work in a very friendly and ambitious environment with a lot of freedom & decision-making power.</b></p>
+					<p><b>MyCointainer</b> has been in business since late 2018. In November 2021 we raised our first financing round and are now backed by strong global VCs. As of today, MyCointainer serves over 120 000 customers globally. Our mission is to enable easy access to various crypto-earning protocols for all. We want everyone to benefit from a changing financial landscape and speed up the global advent of crypto adoption. We pride ourselves on very rapid delivery, on which we have a clear-cut focus.</p>
+					<p>Moving forward with this idea, we need great people to build amazing stuff!</p>
+					<h3>Responsibilities:</h3>
+					<ul>
+						<li>Organizing the efficient work of the QA in the company</li>
+						<li>Providing regular reports and technical documentation</li>
+						<li>Product testing</li>
+						<li>Preproduction approving</li>
+						<li>Writing new auto-tests</li>
+						<li>Support for old auto-tests</li>
+						<li>Communication with the development team</li>
+						<li>Monitoring and tracking the elimination of defects, coordinating with developers to prevent, report, and remediate defects</li>
+					</ul>
+					<h3>Requirements:</h3>
+					<ul>
+						<li>4+ years of experience in a software testing capacity in a startup environment</li>
+						<li>2+ years of experience with automation testing</li>
+						<li>Experience with TypeScript/Allure/PlayWright or desire/ability to work with these technologies</li>
+						<li>Experience in a fast-paced project environment, working under Agile or Scrum paradigm</li>
+						<li>Working directly with the product and engineering teams to understand/review requirements, enhancements, and bug fixes</li>
+						<li>Experience testing in Web applications</li>
+						<li>Experience in functional, integration, system, security, performance, regression, load, and user acceptance testing, using automated testing techniques, preferably using exploratory testing methodology</li>
+						<li>Able to debug defects using various error monitoring tools</li>
+						<li>Experience collaborating with other engineers</li>
+						<li>Excellent communication and collaboration skills</li>
+						<li>Knowledge of quality assurance tools, and project management tools such as ClickUp</li>
+						<li>Able to discuss quality challenges with our product managers and make improvements</li>
+					</ul>
+					<h3>Will be a plus:</h3>
+					<ul>
+						<li>Experience testing in Mobile applications</li>
+					</ul>
+					<h3>Benefits:</h3>
+					<ul>
+						<li>Competitive salary with reviews and a clear promotion system</li>
+						<li>Fully remote</li>
+						<li>Flexible schedule</li>
+						<li>Unlimited paid vacation and sick leave</li>
+						<li>English lessons</li>
+						<li>An amazing team of mostly Senior+ specialists that you can learn from</li>
+						<li>Friendly environment with lots of freedom and decision-making opportunities</li>
+						<li>We generally work in very small teams of 2-3 Senior-level developers. Also, we limit stakeholders to a max of 1-2 decisions makers to run projects fast without any bureaucracy</li>
+					</ul>
 				</div>
 			</div>
+		</section>
+		<section class="hot_positions_slider">
 			<div class="wrap">
-				<div class="triger_category_list">
-					<p>Show: <span>All</span></p>
-				</div>
-				<ul class="category_list">
-					<button class='close_categories'>Close</button>
-					<li class="all">All</li>
-					<li class="technology">QA Automation</li>
-					<li class="customer_care">JavaScript</li>
-					<li class="devops">DevOps</li>
-				</ul>
-				<div class="flex_container">
-					<div>
+				<h2>More opened positions for your career</h2>
+				<div class="slider">
+					<div class="slide">
 						<p class="category">QA Automation</p>
 						<h3>Middle/Senior AQA Engineer</h3>
 						<a href="ppc_manager_aqa_engineer.html" class="read_more">Read more<img src="img/arrow-right.svg" alt="arrow"></a>
 					</div>
-					<div>
+					<div class="slide">
 						<p class="category">JavaScript</p>
 						<h3>Senior Front-end Developer (JavaScript)</h3>
 						<a href="ppc_manager_front_end.html" class="read_more">Read more<img src="img/arrow-right.svg" alt="arrow"></a>
 					</div>
-					<div>
+					<div class="slide">
 						<p class="category">DevOps</p>
 						<h3>Middle/Senior DevOps Engineer</h3>
 						<a href="ppc_manager_devops.html" class="read_more">Read more<img src="img/arrow-right.svg" alt="arrow"></a>
 					</div>
+				</div>
+				<div class="slider-progress">
+					<input id="SliderRange" min="1" max="3" value="1" type="range" step="1">
 				</div>
 			</div>
 		</section>
@@ -111,6 +155,38 @@
 			</div>
 		</div>
 		<!-- end cookie_modal -->
+		<!-- apply position modal --> 
+		<div class="apply_position_modal modal_window blue_bg">
+			<div class="wrap">
+				<h2>Apply to position</h2>
+				<button class="close"></button>
+				<form action="#">				
+					<div>
+						<input type="text" placeholder="Full name*" id="Name">
+						<label for="Name">Full name*</label>
+					</div>
+					<p class="upload_file  cv_file">
+						<label for="CVFile">Upload CV file*</label>
+						<input id="CVFile" type="file" accept=".doc, .pdf">
+					</p>
+					<div>
+						<input type="email" placeholder="example@gmail.com" id="Email">
+						<label for="Email">Email*</label>
+					</div>
+					<p class="upload_file cover_letter">
+						<label for="CoverLetter">Upload Cover Letter</label>
+						<input id="CoverLetter" type="file" accept=".doc, .pdf">
+					</p>
+					<div>
+						<input type="text" id="Location" placeholder="Location*">
+						<label for="Location">Location*</label>
+					</div>
+					<input type="submit" class="submit" value="Send">
+				</form>
+				<p class="required_fields_notice">*Required fields  /  Supported file formats .doc and .pdf</p>
+			</div>
+		</div>
+		<!-- end apply position modal --> 
 		<!-- join us modal window -->
 		<div class="join_us_modal modal_window blue_bg">
 			<div class="wrap">
