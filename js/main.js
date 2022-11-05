@@ -61,16 +61,16 @@ if ($(window).width() < 1024 ) {
     });
 }
 //show join us modal
-$('.join_us_modal').hide();
+/*$('.join_us_modal').hide();
 $('.join_us button').click(function(show_join_us_modal) {
     $('.join_us_modal').fadeIn(200).css({'display' : 'flex'});
-});
+});*/
 //cloose modals 
 $('.modal_window .close').click(function(close_modals) {
     $('.modal_window').hide();
 })
 //change join us modal screens
-if ($('.first_modal').css({'display' : 'flex'})) {
+/*if ($('.first_modal').css({'display' : 'flex'})) {
     $('.second_modal, .join_us_modal .submit, .modal_window .back_btn, .join_us_second_notice').hide();
 } else {
     $('.first_modal, .next_btn').hide();
@@ -84,7 +84,7 @@ $('.modal_window .back_btn').click(function(join_us_back_btn) {
     $('.next_btn, .required_fields_notice').show();
     $('.second_modal, .join_us_modal .submit, .modal_window .back_btn, .join_us_second_notice').hide();
     $('.join_us_modal .first_modal').css({'display' : 'flex'})
-})
+})*/
 //show contact us modal
 $('.contact_us_modal').hide();
 $('.contact_us_triger').click(function(how_contacts_modal) {
@@ -157,7 +157,7 @@ $('.apply_position_modal input#CoverLetter').on('change', function(apply_cover_f
     };
 });
 //join us file input
-$('.join_us_modal input#CVFileJoin').on('change', function(apply_cv_file) {    
+/*$('.join_us_modal input#CVFileJoin').on('change', function(apply_cv_file) {    
     var join_cv_file_input_value = $('.join_us_modal input#CVFileJoin').val();
 
     if ( join_cv_file_input_value ){
@@ -182,4 +182,4 @@ $('.join_us_modal input#CoverLetterJoin').on('change', function(apply_cover_file
             'border':'none'
         });
     };
-});
+});*/

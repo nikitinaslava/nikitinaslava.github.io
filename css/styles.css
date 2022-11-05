@@ -358,8 +358,22 @@ header {
     padding: 40px 30px;
     margin-left: -30px;
 }
-.hot_positions_slider .slider .slick-slide div div, .vacancies_container .flex_container div {
+.hot_positions_slider .slider .slick-slide div div {
     display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 42px 42px 48px;
+    margin-right: 30px;
+    width: 528px !important;
+    height: 576px;
+    background: #FFFFFF;
+    box-shadow: 0px 14px 34px rgb(0 0 0 / 6%);
+    border-radius: 12px;
+    pointer-events: none;
+}
+.vacancies_container .flex_container div {
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
@@ -606,6 +620,10 @@ a.map_mark.ukraine {
 a.map_mark.poland {
     top: 42.5%;
     left: 55%;
+}
+a.map_mark.canada {
+    top: 40%;
+    left: 20%;
 }
 span.map_mark_country_title {
     position: absolute;
