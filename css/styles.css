@@ -2374,6 +2374,8 @@ footer p, footer a {
     padding-top: 240px;
     margin: 0 auto 226px;
     position: relative;
+    font-size: 190px;
+    line-height: 1;
  }
  .ppc_manager_page .header_content h1:after {
     content: "";
@@ -2383,7 +2385,7 @@ footer p, footer a {
     height: 190px;
     position: absolute;
     top: 240px;
-    right: -224px;
+    right: -300px;
  }
  .ppc_manager_page .header_content p {
     width: 1085px;
@@ -2412,6 +2414,7 @@ footer p, footer a {
         width: 645px;
         padding-top: 112px;
         margin: 0 auto 116px;
+        font-size: 102px;
     }
     .ppc_manager_page .header_content h1:after {
         top: 110px;
@@ -2454,10 +2457,11 @@ footer p, footer a {
         width: 594px;
         padding-top: 186px;
         margin: 0 auto 154px;
+        font-size: 70px;
     }
     .ppc_manager_page .header_content h1:after {
         top: 124px;
-        right: -114px;
+        right: -164px;
     }
     .ppc_manager_page .header_content p {
         width: 594px;
@@ -2514,6 +2518,7 @@ footer p, footer a {
         padding-top: 122px;
         margin: 0 auto 130px;
         width: 288px;
+        font-size: 46px;
     }
     .ppc_manager_page .header_content h1:after {
         display: none;
